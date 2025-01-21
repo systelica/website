@@ -1,0 +1,77 @@
+/* Reset and Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4c67f4, #9a57d3);
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    animation: fade-in 2s ease-in-out forwards;
+    opacity: 0;
+}
+
+.content p {
+    font-size: 1.2rem;
+    animation: fade-in 3s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Loader Animation */
+.loader {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.loader span {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 50%;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.loader span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Animations */
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
